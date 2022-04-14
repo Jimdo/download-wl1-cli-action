@@ -1,0 +1,14 @@
+name: 'Download Wonderland 1 CLI'
+description: 'Download Wonderland 1 CLI'
+branding:
+  icon: 'download-cloud'
+  color: 'blue'
+inputs:
+  token:
+    description: 'A GitHub token to use for downloading'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
